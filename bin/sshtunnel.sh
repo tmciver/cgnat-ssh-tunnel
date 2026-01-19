@@ -4,7 +4,7 @@ set -x
 
 # === EDIT THESE ===
 REMOTE_USER="root"                  # or your VPS user
-REMOTE_HOST="123.45.67.89"          # your VPS public IP
+REMOTE_HOST="74.208.73.242"         # your VPS public IP
 REMOTE_PORT="8096"
 LOCAL_PORT="8096"
 SSH_KEY="/home/tim/.ssh/id_ed25519"
@@ -19,7 +19,7 @@ echo "Starting tunnel $HOSTNAME → $REMOTE_HOST"
 
 exec ssh -o StrictHostKeyChecking=no \
      -o ServerAliveInterval=30 \
-     -o ServerAliveCountThreshold=3 \
+     -o ServerAliveCountMax=3 \
      -o ExitOnForwardFailure=yes \
      -o GatewayPorts=yes \
      -N -T \
