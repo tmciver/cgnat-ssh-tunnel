@@ -17,12 +17,16 @@ ssh -p "$SSH_PORT" "$REMOTE_USER@$REMOTE_HOST" \
 
 echo "Starting tunnel $HOSTNAME → $REMOTE_HOST"
 
-exec ssh -o StrictHostKeyChecking=no \
+exec autossh \
+     -M 0 \
+     -f \
+     -N \
+     -T \
+     -o StrictHostKeyChecking=no \
      -o ServerAliveInterval=30 \
      -o ServerAliveCountMax=3 \
      -o ExitOnForwardFailure=yes \
      -o GatewayPorts=yes \
-     -N -T \
      -i "$SSH_KEY" \
      -p "$SSH_PORT" \
      -R "$REMOTE_PORT:localhost:$LOCAL_PORT" \
