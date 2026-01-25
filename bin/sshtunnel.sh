@@ -6,7 +6,7 @@ set -x
 REMOTE_USER="root"                  # or your VPS user
 REMOTE_HOST="74.208.73.242"         # your VPS public IP
 REMOTE_PORT="8096"
-LOCAL_PORT="8096"
+LOCAL_PORT="80"
 SSH_KEY="/home/tim/.ssh/id_ed25519"
 SSH_PORT="22"                       # change if you use a non-standard port
 # ==================
