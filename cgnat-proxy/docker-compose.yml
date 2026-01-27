@@ -3,5 +3,6 @@ services:
   proxy:
     image: nginx:latest
     network_mode: host
+    restart: always
     volumes:
       - ./default:/etc/nginx/sites-available/default

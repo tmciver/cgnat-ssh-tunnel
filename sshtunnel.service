@@ -1,0 +1,14 @@
+[Unit]
+Description=SSH Reverse Tunnel
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=tim
+Group=tim
+ExecStart=/home/tim/cgnat-ssh-tunnel/bin/sshtunnel.sh
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

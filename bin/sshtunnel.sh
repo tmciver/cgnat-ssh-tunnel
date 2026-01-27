@@ -19,7 +19,6 @@ echo "Starting tunnel $HOSTNAME → $REMOTE_HOST"
 
 exec autossh \
      -M 0 \
-     -f \
      -N \
      -T \
      -o StrictHostKeyChecking=no \
