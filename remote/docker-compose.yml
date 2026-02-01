@@ -5,4 +5,6 @@ services:
     network_mode: host
     restart: always
     volumes:
-      - ./default:/etc/nginx/sites-available/default
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./etc/letsencrypt/live/timmciver.com/:/etc/letsencrypt/live/timmciver.com/
+
