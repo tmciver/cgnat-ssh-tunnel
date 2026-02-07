@@ -6,7 +6,7 @@ Wants=network-online.target
 [Service]
 User=tim
 Group=tim
-ExecStart=/home/tim/cgnat-ssh-tunnel/local/bin/sshtunnel.sh
+ExecStart=/home/tim/cgnat-ssh-tunnel/app-server/bin/sshtunnel.sh
 Restart=always
 RestartSec=10
 
