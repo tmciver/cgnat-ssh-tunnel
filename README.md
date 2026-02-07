@@ -10,7 +10,7 @@ This project is used to establish a reverse SSH tunnel from a proxy server to an
 
 The reverse SSH tunnel is initiated on an application server which is behind CGNAT by running the script `./app-server/bin/sshtunnel.sh`. Since one does not want to have to run this script manually when the server is rebooted, a systemd service is used to run the script on startup. To do this, create a link to `sshtunnel.service` with:
 
-    $ sudo ln -s sshtunnel.service /etc/systemd/system/
+    $ sudo ln -s <project-dir>/app-server/sshtunnel.service /etc/systemd/system/
 
 and restart the server. (TODO: Is this enough or does the service have to be enabled first?)
 
