@@ -4,6 +4,4 @@ services:
     network_mode: host
     restart: always
     volumes:
-      - ./proxy.conf:/etc/nginx/conf.d/proxy.conf
-      - ./etc/letsencrypt/live/timmciver.com/:/etc/letsencrypt/live/timmciver.com/
-
+      - ./proxy.conf:/etc/nginx/nginx.conf
